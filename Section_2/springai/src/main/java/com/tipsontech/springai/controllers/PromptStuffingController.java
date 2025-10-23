@@ -1,6 +1,8 @@
 package com.tipsontech.springai.controllers;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,7 @@ public class PromptStuffingController {
     public String promptStuffing(@RequestParam("message") String message) {
        return chatClient
                .prompt()
+               .options(OpenAiChatOptions.builder().model(OpenAiApi.ChatModel.GPT_4_1_NANO).build())
                .system(systemPromptTemplate)
                .user(message)
                .call()
