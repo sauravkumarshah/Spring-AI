@@ -38,7 +38,7 @@ public class ChatController {
                         responsibilities, respond politely and inform them that you are 
                         only able to assist with IT support tasks within your defined scope.
                         """)
-//               .user(message)
+               .user(message)
                .call()
                .content();
     }
