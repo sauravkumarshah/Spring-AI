@@ -27,7 +27,8 @@ public class PromptStuffingController {
     public String promptStuffing(@RequestParam("message") String message) {
        return chatClient
                .prompt()
-               .options(OpenAiChatOptions.builder().model(OpenAiApi.ChatModel.GPT_4_1_NANO).build())
+               .options(OpenAiChatOptions.builder()
+                       .model(OpenAiApi.ChatModel.GPT_4_1_NANO).build())
                .system(systemPromptTemplate)
                .user(message)
                .call()

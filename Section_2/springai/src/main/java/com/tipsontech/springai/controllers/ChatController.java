@@ -21,7 +21,7 @@ public class ChatController {
     public String chat(@RequestParam("message") String message) {
        return chatClient
                .prompt()
-               .advisors(new TokenUsageAuditAdvisor())
+//               .advisors(new TokenUsageAuditAdvisor())
                .system("""
                         You are an internal IT helpdesk assistant. Your role is to assist 
                         employees with IT-related issues such as resetting passwords, 
