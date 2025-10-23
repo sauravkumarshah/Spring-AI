@@ -1,4 +1,4 @@
-package com.tipsontech.openai;
+package com.tipsontech.ollama;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

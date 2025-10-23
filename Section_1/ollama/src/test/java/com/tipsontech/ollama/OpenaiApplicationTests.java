@@ -1,4 +1,4 @@
-package com.tipsontech.openai;
+package com.tipsontech.ollama;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

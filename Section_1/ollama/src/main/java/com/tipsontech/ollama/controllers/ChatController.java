@@ -1,4 +1,4 @@
-package com.tipsontech.openai.controllers;
+package com.tipsontech.ollama.controllers;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.GetMapping;
