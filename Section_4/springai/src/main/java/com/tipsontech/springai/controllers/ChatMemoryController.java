@@ -21,6 +21,7 @@ public class ChatMemoryController {
                                              @RequestParam("message") String message) {
         return ResponseEntity.ok(chatClient.prompt()
                 .user(message)
+                        .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, username))
                 .call()
                 .content());
     }
